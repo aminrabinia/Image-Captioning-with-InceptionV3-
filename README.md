@@ -16,6 +16,11 @@ Brown dog is running.
 
 The image captioning model has to learn how to come up with the best caption for any given picture. So the model has an object detection module and a text generation algorithm combined together. The InceptionV3 model, which performs the object detection task, is an improvement upon Google’s original InceptionV1 (GoogleNet) model. This model introduces the idea of an Inception layer, a combination of 1x1, 3x3, and 5x5 Convolutional layers concatenated into a single output vector.
 
+```
+model = InceptionV3(weights='imagenet')
+model = Model(inputs=model.input, outputs=model.layers[-2].output)
+```
+
 
 
 
